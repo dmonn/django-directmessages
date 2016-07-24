@@ -18,7 +18,7 @@ Django-Directmessage is thought to be used with APIs or small apps, but can be u
 Requirements
 ============
 
-To be evaluated.
+*Django >= 1.5* is supported and tested
 
 Installation
 ============
