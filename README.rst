@@ -1,6 +1,9 @@
 Django-Directmessages
 =====================
 
+.. image:: https://travis-ci.org/dmonn/django-directmessages.svg?branch=master
+    :target: https://travis-ci.org/dmonn/django-directmessages
+
 Django-Directmessages is a low-level and easy-to-use Django App to manage simple directmessages.
 In contrast to other Django Apps for messaging, Django-Directmessages doesn't use any type of pre-built templates and is concentrated on the programmatic usage.
 
