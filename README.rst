@@ -26,7 +26,8 @@ Installation
 Usage
 =====
 
-Import the Message Management API on top of your ``views.py``::
+Import the Message Management API on top of your ``views.py`` ::
+
 	from directmessages.models import Inbox
 
 * Send message: ``Inbox.send_message(from_user, to_user, message)``
@@ -34,9 +35,9 @@ Import the Message Management API on top of your ``views.py``::
 * Read a message (and mark as read): ``Inbox.read_message(message)``
 * Print a message as <user>: <message>: ``Inbox.read_message_formatted(message)``
 * Print a list of all conversation partners for a user: ``Inbox.get_conversations(users)``
-* Get a conversation between two users: ``Inbox.get_conversation(user1, user2, *limit, *reversed``
-	Limit (Int: optional): Instead of getting the whole conversation, get the first 50 (depends on reversed)
-	Reversed (Bool: optional): Usually the 'limit'-param gives back the first x messages, if you put Revered to True, limit will give back the x latest messages.
+* Get a conversation between two users: ``Inbox.get_conversation(user1, user2, _limit_, _reversed_)``
+	- Limit (Int: optional): Instead of getting the whole conversation, get the first 50 (depends on reversed)
+	- Reversed (Bool: optional): Usually the 'limit'-param gives back the first x messages, if you put Reversed to True, limit will give back the x latest messages.
 
 Signals
 =======
