@@ -1,0 +1,58 @@
+Django-Directmessages
+=====================
+
+Django-Directmessages is a low-level and easy-to-use Django App to manage simple directmessages.
+In contrast to other Django Apps for messaging, Django-Directmessages doesn't use any type of pre-built templates and is concentrated on the programmatic usage.
+
+Django-Directmessage is thought to be used with APIs or small apps, but can be used for any type of messaging. It featues:
+
+* Sending of private 1-to-1 messages between users.
+* Listing unread messages for a given user.
+* Read a given message 
+* Get all conersation partners/contacted users for a given user
+* Read a whole conversation between two users.
+
+Requirements
+============
+
+To be evaluated.
+
+Installation
+============
+
+1. ``pip install django-directmessages``
+2. add ``"directmessages"`` to ``INSTALLED_APPS`` and run ``python manage.py migrate``.
+
+Usage
+=====
+
+Import the Message Management API on top of your ``views.py``::
+	from directmessages.models import Inbox
+
+* Send message: ``Inbox.send_message(from_user, to_user, message)``
+* List all unread messages: ``Inbox.get_unread_messages(user)``
+* Read a message (and mark as read): ``Inbox.read_message(message)``
+* Print a message as <user>: <message>: ``Inbox.read_message_formatted(message)``
+* Print a list of all conversation partners for a user: ``Inbox.get_conversations(users)``
+* Get a conversation between two users: ``Inbox.get_conversation(user1, user2, *limit, *reversed``
+	Limit (Int: optional): Instead of getting the whole conversation, get the first 50 (depends on reversed)
+	Reversed (Bool: optional): Usually the 'limit'-param gives back the first x messages, if you put Revered to True, limit will give back the x latest messages.
+
+Signals
+=======
+
+You can use the following signals to extend the app for your needs
+
+* message_sent:
+	Gets called as soon as a message is sent.
+	Provides the Message object, the sender and the recipient as params.
+
+* message_read:
+	Gets called as soon as a message is read:
+	Provides the Message object, the sender and the recipient as params.
+
+Contributing
+============
+
+Bug reports, patches and fixes are always welcome!
+	
