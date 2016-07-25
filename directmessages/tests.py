@@ -41,7 +41,7 @@ class MessageReadingTestCase(TestCase):
         unread_messages = Inbox.get_unread_messages(self.u1)
         self.assertEqual(unread_messages.count(), 1)
 
-        message = Inbox.read_message(unread_messages[0])
+        message = Inbox.read_message(unread_messages[0].id)
         unread_messages_after = Inbox.get_unread_messages(self.u1)
 
         self.assertEqual(message, "This is another message")
@@ -53,7 +53,7 @@ class MessageReadingTestCase(TestCase):
         unread_messages = Inbox.get_unread_messages(self.u1)
         self.assertEqual(unread_messages.count(), 1)
 
-        message = Inbox.read_message_formatted(message)
+        message = Inbox.read_message_formatted(message.id)
         unread_messages_after = Inbox.get_unread_messages(self.u1)
 
         self.assertEqual(message, self.u2.username + ": This is just another message")

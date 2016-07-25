@@ -43,25 +43,27 @@ class MessagingService(object):
         """
         return Message.objects.all().filter(recipient=user, read_at=None)
 
-    def read_message(self, message):
+    def read_message(self, message_id):
         """
         Read specific message
-        :param message: Message
+        :param message_id: Integer
         :return: Message Text
         """
         try:
+            message = Message.objects.get(id=message_id)
             self.mark_as_read(message)
             return message.content
         except Message.DoesNotExist:
             return ""
 
-    def read_message_formatted(self, message):
+    def read_message_formatted(self, message_id):
         """
         Read a message in the format <User>: <Message>
-        :param message_id:
+        :param message_id: Id
         :return: Formatted Message Text
         """
         try:
+            message = Message.objects.get(id=message_id)
             self.mark_as_read(message)
             return message.sender.username + ": "+message.content
         except Message.DoesNotExist:
