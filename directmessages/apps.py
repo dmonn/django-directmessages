@@ -1,16 +1,23 @@
 from __future__ import unicode_literals
-
-
-from django.apps import AppConfig
+from django import VERSION as DJANGO_VERSION
 
 Inbox = None
 
-class DirectmessagesConfig(AppConfig):
-    name = 'directmessages'
-    label = 'somethingelse'
+if DJANGO_VERSION >= (1, 7):
+    from django.apps import AppConfig
+    class DirectmessagesConfig(AppConfig):
+        name = 'directmessages'
+        label = 'somethingelse'
 
-    def ready(self):
-        # For convenience
-        from directmessages.services import MessagingService
-        global Inbox
-        Inbox = MessagingService()
+        def ready(self):
+            # For convenience
+            from directmessages.services import MessagingService
+            global Inbox
+            Inbox = MessagingService()
+else:
+    config = object
+    class DirectmessagesConfig(config):
+        def __init__(self):
+            from directmessages.services import MessagingService
+            global Inbox
+            Inbox = MessagingService()
