@@ -20,6 +20,7 @@ settings.configure(
         'django.contrib.contenttypes',
         'directmessages',
         'directmessages.tests',
+        'directmessages.apps.DirectmessagesConfig',
     ],
     ROOT_URLCONF='directmessages.urls',
     MIDDLEWARE_CLASSES=OUR_MIDDLEWARE,

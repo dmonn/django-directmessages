@@ -130,6 +130,3 @@ class MessagingService(object):
             message_read.send(sender=message, from_user=message.sender, to=message.recipient)
             message.save()
 
-
-# For convenience
-Inbox = MessagingService()
