@@ -12,13 +12,13 @@ Django-Directmessage is thought to be used with APIs or small apps, but can be u
 * Sending of private 1-to-1 messages between users.
 * Listing unread messages for a given user.
 * Read a given message 
-* Get all conersation partners/contacted users for a given user
+* Get all conversation partners/contacted users for a given user
 * Read a whole conversation between two users.
 
 Requirements
 ============
 
-*Django >= 1.5* is supported and tested
+*Django >= 1.5* is supported
 
 Installation
 ============
