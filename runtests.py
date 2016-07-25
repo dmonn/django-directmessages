@@ -18,8 +18,6 @@ settings.configure(
         'django.contrib.auth',
         'django.contrib.sessions',
         'django.contrib.contenttypes',
-        'directmessages',
-        'directmessages.tests',
         'directmessages.apps.DirectmessagesConfig',
     ],
     ROOT_URLCONF='directmessages.urls',

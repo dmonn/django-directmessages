@@ -1,4 +1,4 @@
-from . import Inbox
+from .apps import Inbox
 from .models import Message
 from django.contrib.auth.models import User
 from django.test import TestCase
