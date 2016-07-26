@@ -3,7 +3,7 @@ import os
 import directmessages
 
 REQUIREMENTS = [
-    'Django>=1.6,<1.10',
+    'Django>=1.5,<1.10',
 ]
 
 CLASSIFIERS = [

@@ -64,6 +64,5 @@ Bug reports, patches and fixes are always welcome!
 To Do
 =====
 
-* Fix problems with Django 1.9
 * Add some security functions (e.g checking if user is allowed to read a message)
 * Add some custom exceptions (e.g. when no message was found)
