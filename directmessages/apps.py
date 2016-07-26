@@ -16,5 +16,7 @@ if DJANGO_VERSION >= (1, 7):
             Inbox = MessagingService()
 
 else:
-    from directmessages.services import MessagingService
-    Inbox = MessagingService()
+    def populateInbox():
+        from directmessages.services import MessagingService
+        global Inbox
+        Inbox = MessagingService()

@@ -18,7 +18,7 @@ settings.configure(
         'django.contrib.auth',
         'django.contrib.sessions',
         'django.contrib.contenttypes',
-        'directmessages.apps.DirectmessagesConfig',
+        'directmessages',
     ],
     ROOT_URLCONF='directmessages.urls',
     MIDDLEWARE_CLASSES=OUR_MIDDLEWARE,
