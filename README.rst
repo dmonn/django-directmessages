@@ -31,7 +31,7 @@ Usage
 
 Import the Message Management API on top of your ``views.py`` ::
 
-	from directmessages.models import Inbox
+	from directmessages.apps import Inbox
 
 * Send message: ``Inbox.send_message(from_user, to_user, message)``
 * List all unread messages: ``Inbox.get_unread_messages(user)``
