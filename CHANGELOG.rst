@@ -1,3 +1,8 @@
+VERSION 0.9.4 (released x)
+==========================
+
+- Changed App Label
+
 VERSION 0.9.2 (released 2016-07-26)
 ===================================
 
