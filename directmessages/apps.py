@@ -7,7 +7,7 @@ if DJANGO_VERSION >= (1, 7):
     from django.apps import AppConfig
     class DirectmessagesConfig(AppConfig):
         name = 'directmessages'
-        label = 'Direct Messaging'
+        label = 'directmessaging'
 
         def ready(self):
             # For convenience

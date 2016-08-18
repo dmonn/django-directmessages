@@ -16,6 +16,7 @@ env:
   - DJANGO="Django==1.7.4"
   - DJANGO="Django==1.8.14"
   - DJANGO="Django==1.9.8"
+  - DJANGO="Django==1.10"
 
 matrix:
   exclude:

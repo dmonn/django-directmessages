@@ -1,3 +1,9 @@
+VERSION 0.9.5 (released 2016-08-18)
+===================================
+
+- Label re-change
+- Django 1.10 support
+
 VERSION 0.9.4 (released 2016-08-18)
 ===================================
 
