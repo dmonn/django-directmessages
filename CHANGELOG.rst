@@ -1,7 +1,8 @@
-VERSION 0.9.4 (released x)
-==========================
+VERSION 0.9.4 (released 2016-08-18)
+===================================
 
 - Changed App Label
+- Fixed str function
 
 VERSION 0.9.2 (released 2016-07-26)
 ===================================

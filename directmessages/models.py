@@ -31,7 +31,7 @@ class Message(models.Model):
         return True
 
     def __str__(self):
-        return "Message from %s to %s", self.sender.username, self.recipient.username
+        return self.content
 
     def save(self, **kwargs):
         if self.sender == self.recipient:
