@@ -1,3 +1,8 @@
+VERSION 0.9.6 (released 2016-09-16)
+===================================
+
+- Added 'mark_read'-flag to conversation check
+
 VERSION 0.9.5 (released 2016-08-18)
 ===================================
 

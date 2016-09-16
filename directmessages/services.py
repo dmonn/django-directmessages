@@ -89,7 +89,7 @@ class MessagingService(object):
         # To abolish duplicates
         return list(set(contacts))
 
-    def get_conversation(self, user1, user2, limit=None, reversed=False):
+    def get_conversation(self, user1, user2, limit=None, reversed=False, mark_read=False):
         """
         List of messages between two users
         :param user1: User
@@ -112,9 +112,10 @@ class MessagingService(object):
             # Limit number of messages to the x newest
             conversation = conversation[:limit]
 
-        for message in conversation:
-            # Just to be sure, everything is read
-            self.mark_as_read(message)
+        if mark_read:
+            for message in conversation:
+                # Just to be sure, everything is read
+                self.mark_as_read(message)
 
         return conversation
 
