@@ -100,7 +100,7 @@ class ConversationTestCase(TestCase):
         unread_messages_after = Inbox.get_unread_messages(self.u1)
 
         self.assertEqual(conversation.count(), 4)
-        self.assertEqual(unread_messages_after.count(), 0)
+        self.assertEqual(unread_messages_after.count(), 2)
 
         conversation_limited = Inbox.get_conversation(self.u1, self.u2, limit=2, reversed=True)
         self.assertEqual(conversation_limited.count(), 2)
